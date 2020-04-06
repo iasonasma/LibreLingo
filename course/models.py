@@ -33,9 +33,6 @@ class DictionaryItem(models.Model):
         verbose_name = "Dictionary Item"
         unique_together = ('course', 'word', 'reverse')
 
-    def __str__(self):
-        return 'Word "{}" in {}'.format(self.word, self.course)
-
     course = models.ForeignKey('Course', on_delete=models.CASCADE)
     reverse = models.BooleanField()
     word = models.TextField()

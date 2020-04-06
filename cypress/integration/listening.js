@@ -7,7 +7,7 @@ describe("Listening exercises", () => {
         })
 
         it("ListeningChallenge", function () {
-            cy.get(".svg-inline--fa.fa-volume-up").should("be.visible")
+            cy.get(".fontawesome-i2svg-pending").should("not.exist")
             cy.percySnapshot(this.test.fullTitle())
         })
 
